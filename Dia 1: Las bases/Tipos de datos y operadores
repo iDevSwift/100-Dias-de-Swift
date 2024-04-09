@@ -1,0 +1,41 @@
+import UIKit
+
+                                                    // ***TIPOS DE DATOS*** \\
+//1-STRINGs [PALABRAS, TEXTO]
+let myString = "Hola, mundo"
+let myString2 = " estoy aprendiendo a programar en Swift"
+let myString3 = myString + "" + myString2
+print(myString3)
+// ¿Sabemos lo que ha ocurrido? Le hemos dado 2 datos y hemos podido juntar los 2 para crear una frase: "Hola, mundo estoy aprendiendo a programar en Swift"
+
+//2-INT [NÚMEROS]
+let myInt = 1
+let myInt2 = 2
+print(myInt + myInt2)
+
+//3-ENTEROS (NÚMEROS ENTEROS)
+let numEntero = 20
+
+//4-FLOTANTES (NÚMEROS MENOS PRECIOSOS O CON DECIMALES) [DOUBLE]
+let numFlot = 20.6
+
+//5-OPERADORES ARITMÉTICOS <+ - *>
+let sumaEnteros = numEntero + 5 // El resultado es 25 ( 20 + 5 )
+let sumaFlotantes = numFlot + 0.4 // El resultado es de 21 ( 20.6 + 0.4 )
+    /*
+var sumaMultiple = numEntero + numFlot <- No se pueden sumar 2 números asi como asi porque Swift no comprende que se quiere hacer
+     */
+let sumaMultiple = Double(numEntero) + Double(numFlot) // Una solución es poner DOUBLE delante del texto para que el programa entienda que queremos obtener una suma de 2 conceptos distintos. El resultado de esto es 40.6 (20 + 20.6). El valor numFlot como es DOUBLE no haría falta moterlo dentro del prefijo DOUBLE(), ya que esta bien para el programa.
+let divIsion = numEntero / 5 // RESULTADO (4) - Este valor es CORRECTO
+let divIsion2 = numEntero / 3 // RESULTADO (6) - Este valor es INCORRECTO ó INCOMPLETO; ya que dividir 20 entre 3 da 6,66 periodo. Para que nos dé 2 cifras o más, debemos poner el prefijo DOUBLE() ó FLOAT() [Aunque es más usado el DOUBLE()] para que sea mas exacto. Por ejem:
+let divIsion3 = Double(numEntero) / 3 // Este valor es CORRECTO y más exacto que el de la linea anterior. ** APLICAR A TODO TIPO DE OPERACIONES NUMÉRICAS **
+
+//Para que no se cometan errores, podemos decirle a la variable explicitamente de que estilo es (no necesario porque Swift sabe diferenciar lo que es un dato u otro, esto es simplemente para evitar errores). Por ej:
+let x:Int = 20
+let y:Double = 20.6
+
+/*
+                                                                          iDevSwift [Diego Maseda]©2024 
+                                                                         "Los 100 dias aprendiendo Swift"
+                                 ✍️ Agradeceria vuestros comentarios de errores por correo electronico (idevyswift24@gmail.com) o bien por Discord ✍️
+*/
