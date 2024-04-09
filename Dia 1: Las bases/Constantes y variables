@@ -1,0 +1,22 @@
+import UIKit
+// VARIABLES
+// Nos indican que los valores pueden cambiar con el paso del tiempo y pueden tener moficiaciones
+var firstVariable = "Esto es una variable"
+var fisrtVariable = "que puedo modificar en posteriores lineas"
+
+var secondVariable = "Segunda linea variable"
+firstVariable = secondVariable // Aqui estamos haciendo que la firstVariable tenga el valor del último dato registrado de la secondVariable
+print (firstVariable)
+
+
+// CONSTANTES
+// Nos indican que tienen un valor fijo y que no pueden cambiar con el paso del tiempo, una vez escrito, posee ese valor
+let firstConst = "Esto es una constante"
+// let firstConst = "que no permite modificar en esta linea" <- en esta linea aparecería un error ya que no tiene el mismo valor que la priemar vez que se escribio let firstConst
+let secondConst = secondVariable // En esta linea estamos diciendo que el valor de secondVariable ahora se vuleva una constante
+
+/*
+                                                                          iDevSwift [Diego Maseda]©2024 
+                                                                         "Los 100 dias aprendiendo Swift"
+                                 ✍️ Agradeceria vuestros comentarios de errores por correo electronico (idevyswift24@gmail.com) o bien por Discord ✍️
+*/
