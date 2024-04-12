@@ -1,0 +1,52 @@
+import UIKit
+
+                                                  // ** BOLEANOS ** \\
+// En este primer ejemplo, SI tenemos titulacion de FP, cobraremos 1500. SI tengo titulo de master, cobrare 4000
+var titulo = "FP Superior"
+var obtencionTitulo = true // Aqui especificamos que tengo titulacion de FP
+var obtencionMaster = false // Aqui especificamos que no tengo titulacion de master
+var salario = 0 // Especificamos que nuestro salario inicial empieza en 0
+
+if obtencionTitulo {
+    salario = 1500
+}else{
+    salario = 4000
+}
+salario
+
+                                                 // ** COLECCIONES ** \\
+                      // Sirven para alamcenar una recopilación de valores para luego trabajar con ellos \\
+
+/* Array - (Ordenado) El primer valor introducido será el primer valor en aparecer - array <String> ó [String]()
+
+// Set - (Desordenado) Estos valores no se podrán repetir, tendrán que ser únicos - set <String>()
+// Dictionary - (Clave-Valor) El valor tendrá una clave única, se pueden repetir pero irá asociado a una clave única - Dictionary <Int:String>()
+*/
+
+
+                                                 // ** ARREGLOS ** \\
+var arregloNumeros = [1,2,3] //   0, 1, 2,... <-Si en print(arreglosNumeros) para sacar el valor 3 ponemos el [3], nos da error, ya que en programacion empieza en 0. Yo las voy a llamar "Ranuras". Por lo que para que nos dé el valor 3 hay que escribir [2]
+let arregloNumerosInmutable = [3,2,1]
+
+                                                 // Agregar valores
+arregloNumeros.append(5) // Con este .append() lo que hacemos es agregar un valor a arregloNumeros (directamente en el siguiente hueco (3)
+arregloNumeros.insert(4, at: 3) // Con este .insert lo que hacemos es meter el numero 4 en la ranura 3 para que vaya de seguido. Automaticamente el 5 se desplaza a la ranura 4
+
+/*
+                                            ** print Valores concretos: **
+print(arregloNumeros[2]) // Nos sale el nÚmero que está ubicado en la ranura 2
+print(arregloNumeros[4]) // Nos sale el número que está ubicado en la ranura 4
+*/
+print(arregloNumeros)
+
+                                                 // Eliminar valores
+arregloNumeros.removeLast() // Para eliminar el último valor (en este caso, el 5)
+arregloNumeros.remove(at: 3) // Para eliminar el valor de la ranura que deseemos
+
+print(arregloNumeros)
+
+arregloNumeros.removeAll() // Para eliminar todos los valores
+print(arregloNumeros)
+
+var arregloVacio:[Int] = [] // Para generar arreglos vacios
+print(arregloVacio)
