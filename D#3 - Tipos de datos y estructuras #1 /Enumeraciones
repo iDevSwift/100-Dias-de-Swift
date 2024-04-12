@@ -1,0 +1,53 @@
+import UIKit
+
+// SINTAXIS ENUMERACION
+enum PersonalData {
+    case name
+    case surname
+    case address
+    case phone
+}  // Podemos dejarlo escrito asi case name, surname, address, phone
+var currentData : PersonalData = .name
+var input = "Brais"
+currentData = .phone
+input = "6666666"
+//Esto sirve para asignarle un valor concreto a cada ranura creada en enum PersonalData, con un valor que no tiene que ser el mismo entre ello
+
+// ENUMERACION CON VALORES ASOCIADOS
+enum complexPersonalData {
+    case name(String)
+    case surname (String, String)
+    case address (String, Int)
+    case phone (Int)
+}
+var complexCurrentData: complexPersonalData = .name("diego")
+complexCurrentData = .address("Calle Pio", 6)
+// En estos ejemplos, estamos diciendo que el case name(string) SOLO puede introducirse valores de tipo String (No podriamos agregar un numero porque nos sale error
+
+//ENUMERAXMERACIONES CON EL MISMO TIPO DE VALOR
+enum RawPersonalData: String{
+    case name
+    case surname
+    case address
+    case phone
+}
+
+RawPersonalData.phone.rawValue // Nos sale el valor "name" en los resultados
+
+
+enum RawPersonalData2: Int{
+    case name
+    case surname
+    case address
+    case phone
+}
+RawPersonalData2.address.rawValue // Nos sale de resultado el numero 2. Recordamos que empieza a contar desde 0
+
+
+enum RawPersonalDataSpanish: String{
+    case name = "Nombre"
+    case surname = "Apellido"
+    case address = "Dirección"
+    case phone = "Número de telf"
+}
+RawPersonalDataSpanish.phone.rawValue // En este resultado (phone) no da el valor "Numero de telefono" que tiene asignado en su case
