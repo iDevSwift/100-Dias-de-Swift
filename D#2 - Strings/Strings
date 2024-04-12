@@ -1,0 +1,29 @@
+import UIKit
+// Para recordar:
+let myStringPrueba1 = "Esto es un ejemplo" //Asi se escribe por defecto en Swift una linea de String
+let myStringPrueba2 : String = "Esto es un ejemplo" //En este caso, forzamos a Swift a que sepa de que clase es esta linea, aunque NO es necesario, ya que el lenguaje ya sabe diferenciar
+
+// ** STRINGS 1 ** \\
+
+//String en varias lineas
+let myMultipleString = """
+Hola, esto son varias lineas para
+comprobar que podemos hacer varios saltos
+con una simple linea.
+"""
+print(myMultipleString) // Como hemos visto, al poner 3" podemos escribir en varias lineas sin tener que escribir tanto codigo y se muestra como en la barra de comandos
+
+
+// String en varias lineas únicamente en el código
+let myFalseMultipleString = """
+Hola, esto son varias lineas para \
+\
+comprobar que podemos hacer varios saltos
+con una simple linea.
+"""
+print(myFalseMultipleString) // En este caso, poniendo las barras como en este fragmento de código, las fases se unen para representarlo en una única linea, sin tanto salto (Como si lo escribieramos normal)
+
+
+//String vacio
+let myEmpyString = ""
+let myEmpyString2 = String()
