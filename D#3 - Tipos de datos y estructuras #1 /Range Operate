@@ -1,0 +1,12 @@
+import UIKit
+
+var ejemplo = [0,1,2,3,4,5,6,7,8,9] //[117,223,4,5,73,67,9,43] //Si cambiamos estos numeros NO nos va a efectar lo de abajo, ya que lo que estrá entre barraas ([]) solo son las casillas para encontrar el número
+
+// OPERADOR RANGO DOBLE LADO / two-sided range operator
+
+var subsetEjemplo = ejemplo[1...3] //Estamos diciendo que nos de un rango cerrado desde el numero 1 al numero 3 del var ejemplo
+var subsetEjemplo2 = ejemplo[1..<4] // Con esta linea estamos indicando que nos de los valores comprendidos entre 1 y menor(<) que cuatro. Es decir, nos dara los valores 1,2,3
+
+// OPERADOR RANGO LADO UNICO / one-sided range operator
+var subsetEjemplo3 = ejemplo[...4] //Si lo nombramos de esta manera, nos dará de resultado los numeros 0,1,2,3,4 (Por que no hay un punto de inicio, asique coge todos los valores hasta llegar a 4)
+var subsetEjemplo4 = ejemplo[6...] //Lo mismo que dice la anterior linea de código pero al revés
