@@ -1,0 +1,39 @@
+import UIKit
+
+// ** DICCIONARIOS ** \\
+
+// SINTAXIS DE DICCIONARIOS
+var myClassicDictionary = Dictionary <Int, String>() // Diccionario clásico
+var myModernDictionary = [Int:String]() // Diccionario moderno (más usado actualmente)
+
+// AÑADIR DATOS A UN DICCIONARIO
+myModernDictionary = [0001:"Pepe"] // Si queremos agregar más > [0001: "Pepe", 002:"Luis"...]
+//                    ^El número representa la "Key" o clave en el diccidonario
+//                           ^La palabra pepe representa el concepto (puede ser nombres, usuarios, correos...etc)
+myModernDictionary[003] = "Bea" // esto es para añadir un único dato al diccionario
+
+/*
+ Bien, si ahora hacemos esto
+ myModernDictionary = [0001:"Pepe", 002:"Luis"]
+ myModernDictionary = [0003:"Juan", 004:"Manu"]
+ 
+ Se borrarían los datos de 0001 y 002 ya que es como sobrescribir los datos. Para añadirlos seria de esta manera:
+ myModernDictionary[003] = "Juan"
+ myModernDictionary[004] = "Manu"
+ myModernDictionary[005] = "Bea"
+ 
+ Asi, se agregan sin borrar los antiguos ya que de la primera forma, se vuelve a cargar el diccionario de 0 (es como si solo pudieramos escribirlo una vez, podemos agregar datos despues; pero si lo ponemos como si fuera el incio se nos pierde todo lo anterior
+ 
+ */
+
+// ACCESO A UN DATO
+myModernDictionary[003]
+
+// LA CLAVE DEL DICCIONARIO ES ÚNICA
+myModernDictionary[001] = "Diego Maseda" // Si hacemos esto, los valores se sobrescriben sobre el valor 001
+myModernDictionary.updateValue("Diego Maseda", forKey: 001) // Opción clásica, no necesaria
+myModernDictionary[001]
+// BORRAR DATOS
+myModernDictionary[001] = nil // Con la palabra nil borramos el dato asociado al Int 001
+myModernDictionary.removeValue(forKey: 001) // Opción clásica, no necesario
+myModernDictionary[001]
