@@ -1,0 +1,17 @@
+import UIKit
+
+// ** TUPLAS ** \\
+// Las tupas es lo más parecido a una coleccion y diccionario, lo que pasa que podemos almacenar varios tipos de datos (String, Int, Double) en una misma linea
+
+var yoMismo = ("Diego", "maseda", 22, 1.77) // En esta "tupla" estamos metiendo datos de string y de Int en la misma linea, que lo efectua correctamente
+
+// BUSCAR VALOR TUPLA
+yoMismo.3 // Con efectuar esto, nos saca el valor que corresponda. **Recuerda que se empieza a contar desde 0
+
+// CREAR VARIABLE TUPLA
+var (nombre,apellido,edad,estatura) = yoMismo // Estamos asignando a la tupla original (yoMismo) distintas variables
+edad // Como se ve aqui, podemos buscar el dato directamente sin tanto código
+
+// COMBINACION DE TUPLAS, VARIABLES Y DICCIONARIO
+var nameTuples = (name:"Juan",lastname:"brian",age:20) // Escribiendo asi el codigo, podremos usar la variable y tras el . podemos buscar por el key del valor (como si fuera un diccionario)
+nameTuples.lastname
